@@ -1,8 +1,8 @@
 import { Injectable } from '@angular/core';
 import { FormBuilder } from '@angular/forms';
 import { OptionsResolver } from '../OptionsResolver/OptionsResolver';
+import { AbstractForm } from './AbstractForm';
 import { FormFactoryInterface } from './FormFactoryInterface';
-import { FormInterface } from './FormInterface';
 
 @Injectable()
 export class FormFactory implements FormFactoryInterface {
@@ -13,7 +13,7 @@ export class FormFactory implements FormFactoryInterface {
     }
 
     public create(token, data?: any, options: {} = {}) {
-        const form: FormInterface = new token();
+        const form: AbstractForm = new token();
 
         const resolver = new OptionsResolver();
         form.configureOptions(resolver);
@@ -29,6 +29,9 @@ export class FormFactory implements FormFactoryInterface {
         }
 
         form.buildForm(this.builder, resolver.resolve(options));
+        if (options['data']) {
+            form.patchValue(options['data']);
+        }
 
         return form;
     }

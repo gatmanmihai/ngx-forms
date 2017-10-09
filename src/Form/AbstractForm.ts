@@ -21,9 +21,17 @@ export abstract class AbstractForm extends FormGroup implements FormInterface {
     /**
      * @returns {Object}
      */
-    toSimpleObject(): Object {
+    public toSimpleObject(): Object {
         const result                                        = {};
         result[changeCase.snakeCase(this.getBlockPrefix())] = this.value;
         return result;
+    }
+
+    protected addControls(controls: Object) {
+        for (const controlName in controls) {
+            if (controls.hasOwnProperty(controlName)) {
+                this.addControl(controlName, controls[controlName]);
+            }
+        }
     }
 }
