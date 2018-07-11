@@ -1,5 +1,5 @@
 import { FormBuilder } from '@angular/forms';
-import { OptionsResolver } from '../OptionsResolver/OptionsResolver';
+import { OptionsResolver } from '..';
 
 export interface FormInterface {
     /**

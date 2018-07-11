@@ -1,6 +1,6 @@
 import { FormBuilder, FormGroup } from '@angular/forms';
 import * as changeCase from 'change-case';
-import { OptionsResolver } from '../OptionsResolver/OptionsResolver';
+import { OptionsResolver } from '..';
 import { FormInterface } from './FormInterface';
 
 export abstract class AbstractForm extends FormGroup implements FormInterface {

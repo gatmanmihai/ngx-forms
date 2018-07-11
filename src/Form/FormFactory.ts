@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { FormBuilder } from '@angular/forms';
-import { OptionsResolver } from '../OptionsResolver/OptionsResolver';
+import { OptionsResolver } from '..';
 import { AbstractForm } from './AbstractForm';
 import { FormFactoryInterface } from './FormFactoryInterface';
 
