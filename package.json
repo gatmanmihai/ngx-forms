@@ -1,18 +1,21 @@
 {
   "name": "@gatman/ngx-forms",
-  "version": "6.0.1",
-  "description": "Angular2 Forms on steroids",
+  "version": "7.0.0",
+  "description": "Angular Forms on steroids",
   "main": "dist/index.js",
   "dependencies": {
-    "@angular/core": "^6.0.0",
-    "@angular/forms": "^6.0.0",
-    "change-case": "^3.0.2",
-    "lodash": "^4.17.10"
+    "@angular/core": "^7.0.0",
+    "@angular/forms": "^7.0.0",
+    "@angular/common": "^7.0.0",
+    "@angular/platform-browser": "^7.0.0",
+    "change-case": "^3.1.0",
+    "lodash": "^4.17.11",
+    "zone.js": "~0.8.26"
   },
   "devDependencies": {
-    "@types/lodash": "^4.14.111",
-    "rxjs": "^6.2.1",
-    "typescript": "^2.9.2"
+    "@types/lodash": "^4.14.121",
+    "rxjs": "^6.3.3",
+    "typescript": "^3.2.2"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
