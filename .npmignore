@@ -1,7 +1,0 @@
-.idea/
-.git/
-src/
-node_modules/
-.gitignore
-tsconfig.json
-package-lock.json
