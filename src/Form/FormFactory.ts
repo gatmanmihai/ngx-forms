@@ -3,7 +3,9 @@ import {FormBuilder} from '@angular/forms';
 import {OptionsResolver} from '..';
 import {FormFactoryInterface} from './FormFactoryInterface';
 
-@Injectable()
+@Injectable({
+    providedIn: 'root'
+})
 export class FormFactory implements FormFactoryInterface {
     builder: FormBuilder;
 
